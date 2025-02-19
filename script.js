@@ -1,5 +1,9 @@
 const GITHUB_API_URL = "https://api.github.com";
+<<<<<<< HEAD
 const GITHUB_TOKEN = "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"; 
+=======
+const GITHUB_TOKEN = "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";  // Adding my own token here, I will make the repo private to avoid the missuse
+>>>>>>> 742e93cf08a193bf639756b578fbad16888ce337
 const BATCH_SIZE = 50; // Number of stargazers to process at a time
 const DELAY_BETWEEN_REQUESTS = 2000; // Delay in milliseconds between API requests
 
@@ -156,4 +160,8 @@ function downloadCSV(data, filename) {
   link.href = url;
   link.download = filename;
   link.style.display = "block";
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 742e93cf08a193bf639756b578fbad16888ce337
