@@ -1,0 +1,10 @@
+{
+    "name": "github-stargazers-tracker",
+    "version": "1.0.0",
+    "description": "Track GitHub repository stargazers",
+    "main": "scripts/fetch-stargazers.js",
+    "scripts": {
+      "fetch": "node scripts/fetch-stargazers.js"
+    },
+    "dependencies": {}
+  }
