@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 
 const GITHUB_API_URL = "https://api.github.com";
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GH_TOKEN = process.env.GH_TOKEN;
 const REPOSITORY = process.env.REPOSITORY;
 const BATCH_SIZE = 50;
 const DELAY_BETWEEN_REQUESTS = 2000;
@@ -14,7 +14,7 @@ function makeRequest(url) {
     const options = {
       headers: {
         'User-Agent': 'Stargazers-Fetch-Action',
-        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Authorization': `token ${GH_TOKEN}`,
         'Accept': 'application/vnd.github.v3.star+json'
       }
     };
