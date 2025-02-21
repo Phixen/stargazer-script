@@ -3,29 +3,29 @@ name: Fetch Stargazers Daily
 on:
   schedule:
     - cron: '0 0 * * *'  # Run at midnight UTC everyday
-  workflow_dispatch:      # Allow manual trigger
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   fetch-stargazers:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          
+
       - name: Install dependencies
         run: npm install
-        
+
       - name: Run stargazers fetch script
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          REPOSITORY: ${{ github.repository }}
+          REPOSITORIES: "phixen/stargazer-script,owner/repo2,owner/repo3,owner/repo4"
         run: node scripts/fetch-stargazers.js
-        
+
       - name: Commit and push if changes
         run: |
           git config --local user.email "action@github.com"
