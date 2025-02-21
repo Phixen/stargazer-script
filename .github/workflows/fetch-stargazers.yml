@@ -23,7 +23,7 @@ jobs:
       - name: Run stargazers fetch script
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          REPOSITORIES: "phixen/stargazer-script,owner/repo2,owner/repo3,owner/repo4"
+          REPOSITORIES: "keploy/keploy,grafana/k6"
         run: node scripts/fetch-stargazers.js
 
       - name: Commit and push if changes
